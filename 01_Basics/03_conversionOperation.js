@@ -21,3 +21,9 @@ let isLogged = 'ji'; // => true
 
 let loggedIn = Boolean(isLogged);
 console.log(loggedIn);
+
+let sumNumber = 23;
+
+let convertNumbertoString = String(sumNumber); //=>33
+// console.log( convertNumbertoString); => 33
+console.log(typeof convertNumbertoString); // =>string
