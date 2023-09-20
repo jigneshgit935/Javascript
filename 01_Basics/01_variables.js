@@ -12,7 +12,6 @@ var email = 'jignes@google.com';
 // now var keyword is deprecated , we do not have to use it anymore
 accoutNo = '22222';
 accoutNo = '545454545454545';
-
 // we should use this type, it is never recommoned
 
 console.table([id, email, accoutNo]);

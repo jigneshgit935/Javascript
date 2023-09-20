@@ -26,3 +26,6 @@ console.log(typeof 2);
 console.log(typeof 'jignesh');
 console.log(typeof null); //---its an object (it is a type)
 console.log(typeof undefined);
+
+
+
