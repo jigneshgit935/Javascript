@@ -5,32 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Closure</title>
   </head>
-  <body></body>
+  <body style="background-color: #313131">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
 
   <script>
-    function outer() {
-      let name = 'jignesh';
+    // 1.
+    // function outer() {
+    //   let name = 'jignesh';
 
-      //   no access to this also
+    //   //   no access to this also
 
-      //   console.log('access to grand', secret);
-      function innerFn() {
-        // this is the lexical scoping
-        let secret = '124';
-        console.log('inner', name);
-      }
+    //   //   console.log('access to grand', secret);
+    //   function innerFn() {
+    //     // this is the lexical scoping
+    //     let secret = '124';
+    //     console.log('inner', name);
+    //   }
 
-      function inner2() {
-        console.log('inner 2', name);
+    //   function inner2() {
+    //     console.log('inner 2', name);
 
-        // this cant be shared
-        // console.log('secret from innerfn', secret);
-      }
-      innerFn();
-      inner2();
+    //     // this cant be shared
+    //     // console.log('secret from innerfn', secret);
+    //   }
+    //   innerFn();
+    //   inner2();
+    // }
+
+    // outer();
+    // console.log('Too outer', name);
+
+    // 2.
+  </script>
+
+  <script>
+    // document.getElementById('orange').onclick = function () {
+    //   document.body.style.backgroundColor = `orange`;
+    // };
+    // document.getElementById('green').onclick = function () {
+    //   document.body.style.backgroundColor = `green`;
+    // };
+
+    function clickHandler(color) {
+      //   document.body.style.backgroundColor = `${color}`;
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
     }
 
-    outer();
-    console.log('Too outer', name);
+    document.getElementById('orange').onclick = clickHandler('orange');
+    document.getElementById('green').onclick = clickHandler('green');
   </script>
 </html>
